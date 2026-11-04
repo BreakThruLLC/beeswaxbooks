@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Beeswax Books | Business Books for Small Business Owners</title>
+<link rel="icon" href="favicon-32.png?v=1" type="image/png" sizes="32x32">
+<link rel="icon" href="favicon.ico?v=1" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=1">
+<meta name="description" content="Beeswax Books publishes practical, plain-English business books for small business owners.">
+<meta property="og:title" content="Beeswax Books">
+<meta property="og:description" content="Business books for small business owners. Practical. Plain English. Built to help you lead, compete, and win.">
+<meta property="og:image" content="https://BeeswaxBooks.com/img/beeswax-logo.png">
+<style>
+/* Same build as AJJbook.com: navy bands, 720px reading column. Honey from the Beeswax logo. */
+:root{
+  --navy:#0D1F47; --honey:#F5B800; --honeyink:#9A6F00; --ink:#1a1a1a; --muted:#555; --paper:#ffffff;
+  --line:#e3e3e8; --warm:#fffbea; --onnavy:#ffffff;
+  --serif:Georgia,"Times New Roman",serif; --sans:Arial,Helvetica,sans-serif;
+  color-scheme:light;
+}
+html,body{background:var(--paper);}
+body{margin:0;color:var(--ink);font-family:var(--serif);line-height:1.55;font-size:17px;}
+img{max-width:100%;height:auto;}
+a{color:var(--navy);}
+a:focus-visible,.btn:focus-visible{outline:3px solid var(--honey);outline-offset:3px;}
+.pad{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));}
+
+.nav{background:var(--navy);font-family:var(--sans);}
+.nav .in{display:flex;flex-wrap:wrap;gap:.4em 1.2em;align-items:center;max-width:960px;margin:0 auto;padding-block:.7em;}
+.nav a{color:var(--onnavy);text-decoration:none;font-size:.95em;}
+.nav a:hover{text-decoration:underline;}
+.nav .brand{font-weight:bold;margin-right:auto;color:var(--honey);}
+
+.hero{background:var(--navy);color:var(--onnavy);border-top:1px solid rgba(255,255,255,.12);}
+.hero .in{max-width:960px;margin:0 auto;display:flex;gap:44px;align-items:center;flex-wrap:wrap;padding-block:48px 56px;}
+.hero .logo{flex:0 1 380px;margin:0 auto;}
+.hero .logo img{display:block;width:100%;}
+.hero .copy{flex:1 1 360px;min-width:0;}
+.eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.12em;font-size:.78em;color:var(--honey);margin:0 0 .6em;font-weight:bold;}
+.hero h1{font-size:2.5em;line-height:1.12;margin:0 0 .35em;text-wrap:balance;}
+.hero h1 em{color:var(--honey);font-style:italic;display:block;}
+.hero .lede{font-size:1.15em;margin:0 0 1.3em;color:#dfe4ee;}
+
+.btn{display:inline-block;background:var(--honey);color:var(--navy);padding:.7em 1.3em;border-radius:6px;text-decoration:none;font-weight:bold;font-family:var(--sans);font-size:1.02em;}
+.btn:hover{filter:brightness(1.07);}
+.btn.navy{background:var(--navy);color:#fff;}
+.btn.ghost{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy);}
+.btns{display:flex;flex-wrap:wrap;gap:.7em;}
+
+.wrap{max-width:720px;margin:0 auto;}
+section{padding-block:38px;}
+section + section{border-top:1px solid var(--line);}
+h2{color:var(--navy);font-size:1.6em;line-height:1.2;margin:0 0 .5em;text-wrap:balance;}
+.label{font-family:var(--sans);text-transform:uppercase;letter-spacing:.12em;font-size:.75em;color:var(--honeyink);font-weight:bold;margin:0 0 .4em;}
+.big{font-size:1.2em;color:var(--navy);font-weight:bold;}
+
+.steps{list-style:none;padding:0;margin:1em 0 0;display:grid;gap:14px;counter-reset:s;}
+.steps li{counter-increment:s;display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;
+  border:1px solid var(--line);border-left:5px solid var(--honey);border-radius:8px;padding:.9em 1em;background:#fcfcfd;}
+.steps li::before{content:counter(s);width:40px;height:40px;border-radius:50%;background:var(--navy);color:#fff;
+  font-family:var(--sans);font-weight:bold;font-size:1.2em;display:grid;place-items:center;}
+.steps strong{color:var(--navy);display:block;font-size:1.1em;}
+.steps p{margin:.2em 0 0;}
+
+.checks{list-style:none;padding:0;margin:.6em 0 0;display:grid;gap:.55em;}
+.checks li{position:relative;padding-left:1.8em;}
+.checks li::before{content:"";position:absolute;left:.2em;top:.3em;width:.45em;height:.85em;border:solid var(--honey);border-width:0 .2em .2em 0;transform:rotate(45deg);}
+
+/* Bookshelf card with the same 3D cover as AJJbook.com */
+.book{display:flex;gap:30px;align-items:center;flex-wrap:wrap;margin-top:1.2em;border:1px solid var(--line);border-radius:10px;padding:24px;background:#fcfcfd;}
+.book .cover{flex:0 0 auto;width:170px;margin:0 auto;padding:6px 6px 14px 18px;}
+.book .cover a{display:block;perspective:1200px;}
+.book3d{display:block;position:relative;transform:rotateY(22deg);transform-style:preserve-3d;transition:transform .5s ease;}
+.book .cover a:hover .book3d{transform:rotateY(12deg);}
+.book3d img{display:block;position:relative;border-radius:2px 5px 5px 2px;box-shadow:10px 16px 24px rgba(0,0,0,.35),2px 3px 8px rgba(0,0,0,.25);}
+.book3d::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7%;z-index:2;border-radius:2px 0 0 2px;pointer-events:none;
+  background:linear-gradient(to right,rgba(255,255,255,.22),rgba(0,0,0,.38) 45%,rgba(255,255,255,.12) 75%,rgba(255,255,255,0));}
+.book3d::after{content:"";position:absolute;top:0;bottom:0;left:0;width:9.8%;transform-origin:left center;transform:rotateY(-90deg) translateX(-100%);
+  background:#0D1F47 url("img/spine.png") center/100% 100% no-repeat;border-radius:2px 0 0 2px;box-shadow:inset -6px 0 10px rgba(0,0,0,.35);}
+@media (prefers-reduced-motion:reduce){.book3d{transition:none;}}
+.book .txt{flex:1 1 280px;min-width:0;}
+.book h3{color:var(--navy);font-size:1.35em;line-height:1.2;margin:0 0 .15em;}
+.book .by{font-family:var(--sans);font-size:.9em;color:var(--muted);margin:0 0 .8em;}
+.soon{font-family:var(--sans);font-size:.9em;color:var(--muted);margin:1.2em 0 0;text-align:center;}
+
+.cta{background:var(--warm);border:2px solid var(--honey);border-radius:10px;padding:1.6em 1.2em;text-align:center;}
+.cta h2{margin-bottom:.3em;}
+.cta p{margin:.3em 0 1.1em;}
+.cta .btns{justify-content:center;}
+
+.foot{background:var(--navy);color:#b9c2d6;font-family:var(--sans);font-size:.85em;margin-top:44px;}
+.foot .in{max-width:720px;margin:0 auto;padding-block:22px 30px;}
+.foot a{color:#dfe4ee;}
+
+@media (max-width:600px){
+  .hero h1{font-size:2em;}
+  .hero .in{padding-block:30px 40px;gap:26px;}
+  .hero .logo{flex-basis:280px;}
+}
+</style>
+</head>
+<body>
+
+<div class="nav"><div class="in pad">
+  <a class="brand" href="#top">Beeswax Books</a>
+  <a href="#books">Our Books</a>
+  <a href="#why">Why Beeswax</a>
+  <a href="https://www.amazon.com/dp/B0HPZ1Z59N" target="_blank" rel="noopener">Buy on Amazon</a>
+</div></div>
+
+<header class="hero" id="top"><div class="in pad">
+  <div class="logo"><img src="img/beeswax-logo-clear.png" width="800" height="349" alt="Beeswax Books"></div>
+  <div class="copy">
+    <p class="eyebrow">Business books for small business owners</p>
+    <h1>Small Business. <em>Big Results.</em></h1>
+    <p class="lede">Beeswax Books makes short, practical books for people who run small businesses. Plain English. Real tools. Ideas you can use on Monday morning.</p>
+    <a class="btn" href="#books">See Our Books &rarr;</a>
+  </div>
+</div></header>
+
+<main class="wrap pad">
+
+<section id="problem">
+  <p class="label">Sound familiar?</p>
+  <h2>Most business books aren’t written for you.</h2>
+  <p>They’re written for big companies with big budgets. They’re long. They’re full of theory. And they assume you have a team to do the work.</p>
+  <p>You don’t have time for that. You have customers to serve, bills to pay, and a business to grow.</p>
+  <p class="big">You need answers you can use today.</p>
+</section>
+
+<section id="why">
+  <p class="label">Why Beeswax</p>
+  <h2>Small, busy, and built to win.</h2>
+  <p>Bees are small. They work hard. Together, they get big things done. That’s how we see small business owners.</p>
+  <p>Beeswax Books was started by a small business owner and business coach who has spent decades starting, building, and running companies. Every book we publish is made to help you lead, compete, and win.</p>
+  <ul class="checks">
+    <li>Short chapters you can read between jobs.</li>
+    <li>Plain English. No jargon, no fluff.</li>
+    <li>Real steps and tools you can put to work right away.</li>
+    <li>Written by people who have run a small business.</li>
+  </ul>
+</section>
+
+<section id="plan">
+  <p class="label">The plan</p>
+  <h2>Three steps to a stronger business.</h2>
+  <ol class="steps">
+    <li><div><strong>Pick a Book</strong><p>Find the book that fits the challenge you face right now.</p></div></li>
+    <li><div><strong>Put It to Work</strong><p>Follow the simple steps. Use the tools. Try one idea this week.</p></div></li>
+    <li><div><strong>Grow Your Way</strong><p>Win more customers, save time, and build the business you set out to build.</p></div></li>
+  </ol>
+</section>
+
+<section id="books">
+  <p class="label">The Bookshelf</p>
+  <h2>Our books</h2>
+  <div class="book">
+    <div class="cover"><a href="https://AJJbook.com" aria-label="Learn more about AI Jiu-Jitsu"><span class="book3d"><img src="img/cover_front.png" width="500" height="750" alt="AI Jiu-Jitsu: Run Circles Around the Big Guys, by Gregg Reed. Front cover."></span></a></div>
+    <div class="txt">
+      <h3>AI Jiu-Jitsu: Run Circles Around the Big Guys</h3>
+      <p class="by">by Gregg Reed &nbsp;&middot;&nbsp; Paperback and Kindle</p>
+      <p>Small is your strength. AI makes you unstoppable. This practical playbook shows small business owners how to use AI to take over the busywork, so you can do what the big guys can’t.</p>
+      <div class="btns">
+        <a class="btn" href="https://www.amazon.com/dp/B0HPZ1Z59N" target="_blank" rel="noopener">Get It on Amazon &rarr;</a>
+        <a class="btn ghost" href="https://AJJbook.com">Learn More</a>
+      </div>
+    </div>
+  </div>
+  <p class="soon">More books for small business owners are on the way.</p>
+</section>
+
+<section id="buy">
+  <div class="cta">
+    <h2>Ready to run circles around the big guys?</h2>
+    <p>Start with our first book. Your next win is a chapter away.</p>
+    <div class="btns"><a class="btn navy" href="https://www.amazon.com/dp/B0HPZ1Z59N" target="_blank" rel="noopener">Get AI Jiu-Jitsu on Amazon &rarr;</a></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot"><div class="in pad">
+  &copy; 2026 Beeswax Books &nbsp;&middot;&nbsp; <a href="https://AJJbook.com">AJJbook.com</a> &nbsp;&middot;&nbsp; <a href="https://BreakThruGrowth.com">BreakThru Growth</a>
+</div></footer>
+
+</body>
+</html>
