@@ -114,6 +114,11 @@ h2{color:var(--navy);font-size:1.6em;line-height:1.2;margin:0 0 .5em;text-wrap:b
 .founder .sig span{font-family:var(--sans);font-size:.85em;color:var(--muted);}
 @media (max-width:600px){.founder img{width:150px;}}
 
+.owners{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:28px;}
+.owners img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:8px;}
+.banner{display:block;width:100%;height:auto;border-radius:8px;margin:.3em 0 1.1em;}
+@media (max-width:600px){.owners{gap:8px;padding-top:20px;}}
+
 .steps{list-style:none;padding:0;margin:1em 0 0;display:grid;gap:14px;counter-reset:s;}
 .steps li{counter-increment:s;display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:start;
   border:1px solid var(--line);border-left:5px solid var(--honey);border-radius:8px;padding:.9em 1em;background:#fcfcfd;}
@@ -181,6 +186,12 @@ h2{color:var(--navy);font-size:1.6em;line-height:1.2;margin:0 0 .5em;text-wrap:b
 
 <main class="wrap pad">
 
+<div class="owners">
+  <img src="img/owner-florist.jpg" width="600" height="600" alt="A smiling flower farmer holding a fresh bouquet">
+  <img src="img/owner-food.jpg" width="600" height="600" alt="A food stand owner smiling at his phone">
+  <img src="img/owner-contractor.jpg" width="600" height="600" alt="A contractor in a red hard hat on a job site">
+</div>
+
 <section id="problem">
   <p class="label">Sound familiar?</p>
   <h2>Most business books aren’t written for you.</h2>
@@ -194,6 +205,7 @@ h2{color:var(--navy);font-size:1.6em;line-height:1.2;margin:0 0 .5em;text-wrap:b
 <section id="why">
   <p class="label">Why Beeswax</p>
   <h2>Busy, bold, and built to win.</h2>
+  <img class="banner" src="img/owner-cafe.jpg" width="1440" height="720" loading="lazy" alt="A cafe owner at work behind his espresso counter">
   <p class="big">We get it. We’ve run small businesses too.</p>
   <p>Bees work hard. They’re self-starters. They tackle big jobs. They get things done. They punch above their weight.</p>
   <p>That’s how we see small business owners like you. Our promise:</p>
